@@ -1,3 +1,9 @@
-const h2 = document.createElement("h2");
-h2.textContent = "This content added by JavaScript";
-document.querySelector("body").appendChild(h2);
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    alert(`Thank you for your message, ${name}! I will get back to you at ${email} soon.`);
+});
